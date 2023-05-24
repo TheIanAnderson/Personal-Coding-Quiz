@@ -1,0 +1,13 @@
+main .btn {
+  background-color: black;
+  color: white;
+  margin: 10px;
+}
+main .btn:hover {
+  color: aqua;
+}
+
+#countdown {
+  margin: 20px;
+  display: inline;
+}

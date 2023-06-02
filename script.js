@@ -20,7 +20,7 @@ var questionArray = [
   text: "Why did the chicken cross the road?",
   choice1: "To get to the other side.",
   choice2: "To see a chicken strip.",
-  isCorrect: choice1
+  isCorrect: this.choice1
 },
 {
   title: "Question 2",
@@ -38,9 +38,13 @@ var questionArray = [
 }];
 var answerButton = document.querySelector(".answerbutton");
 var answerButton2 = document.querySelector(".answerbutton2")
+var answerButton3 = document.querySelector(".answerbutton3")
+var answerButton4 = document.querySelector(".answerbutton4")
+var answerButton5 = document.querySelector(".answerbutton5")
+var answerButton6 = document.querySelector(".answerbutton6")
+
 var correctAnswers = 0;
 var incorrectAnswers = 0;
-
 
 titleText.textContent = questionArray[0].title;
 questionText.textContent = questionArray[0].text;
@@ -53,13 +57,73 @@ startButton.addEventListener("click", function(){
   startButton.setAttribute("style","display:none");
   answerButton.setAttribute("style", "display:inline");
   answerButton2.setAttribute("style", "display:inline");
-  answerButton.addEventListener("click", function(){
-    ++correctAnswers;
-    
-  })
+  return question1();
+});
 
-  
-})
+function question1(){
+  answerButton.addEventListener("click", function(){
+    if(answerButton.textContent != questionArray[1].choice2){
+      ++correctAnswers;
+      console.log("Correct: " + correctAnswers);
+      console.log("Incorrect: " + incorrectAnswers);
+      return question2();
+    }
+  });
+  answerButton2.addEventListener("click", function(){
+    if(answerButton2.textContent != questionArray[1].choice1){
+      ++incorrectAnswers;
+      console.log("Correct: " + correctAnswers);
+      console.log("Incorrect: " + incorrectAnswers);
+      return question2();
+    }
+  });
+}
+
+function question2(){
+  titleText.textContent = questionArray[2].title;
+  questionText.textContent = questionArray[2].text;
+  answerButton.textContent = questionArray[2].choice1;
+  answerButton2.textContent = questionArray[2].choice2;
+  answerButton.addEventListener("click", function(){
+    if(answerButton.textContent != questionArray[2].choice2){
+      ++incorrectAnswers;      
+      console.log("Correct: " + correctAnswers);
+      console.log("Incorrect: " + incorrectAnswers);
+      return question3();
+    }
+  });
+  answerButton2.addEventListener("click", function(){
+    if(answerButton2.textContent != questionArray[2].choice1){
+    ++correctAnswers;
+    console.log("Correct: " + correctAnswers);
+    console.log("Incorrect: " + incorrectAnswers);
+    return question3();
+    }
+  });
+}
+
+
+function question3(){
+  titleText.textContent = questionArray[3].title;
+  questionText.textContent = questionArray[3].text;
+  answerButton.textContent = questionArray[3].choice1;
+  answerButton2.textContent = questionArray[3].choice2;
+  answerButton.addEventListener("click", function(){
+    if(answerButton.textContent != questionArray[3].choice2){
+      ++incorrectAnswers;      
+      console.log("Correct: " + correctAnswers);
+      console.log("Incorrect: " + incorrectAnswers);
+    }
+  });
+  answerButton2.addEventListener("click", function(){
+    if(answerButton2.textContent != questionArray[3].choice1){
+    ++correctAnswers;
+    console.log("Correct: " + correctAnswers);
+    console.log("Incorrect: " + incorrectAnswers);
+    }
+  });
+}
+
 
 
 

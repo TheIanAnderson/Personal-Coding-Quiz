@@ -14,26 +14,25 @@
 
   <body class="bg-dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="./index.html"
-          >Personal Coding Quiz</a
-        >
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light"
-                aria-current="page"
-                href="./High-Scores.html"
-                >View High Scores</a
-              >
-            </li>
-          </ul>
-        </div>
+      <div class="container">
+        <h1 class="navbar-brand text-white" href="./index.html">
+          Personal Coding Quiz
+        </h1>
       </div>
-
-      <h1 id="countdown" class="text-light"></h1>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active text-light"
+              aria-current="page"
+              href="./High-Scores.html"
+              >View High Scores</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
+
     <br />
     <br />
     <br />
@@ -43,21 +42,34 @@
     <br />
 
     <main>
-      <div class="card container" style="width: 50%">
-        <div class="card-body row">
-          <h5 class="card-title" id="question-title"></h5>
-          <h6 class="card-subtitle mb-2" id="question-text"></h6>
-          <button href="#" class="start-quiz-button btn">Start Quiz!</button>
-          <button href="#" class="answerbutton" id ="answer1"></button>
+      <div class="card container text-center" style="width: 50%">
+        <div id="questionContainer" class="card-body align-center row">
+          <h3 class="card-title text-center" id="question-title"></h3>
+          <h6 class="card-subtitle mb-2 text-center" id="question-text"></h6>
+          <br />
+          <br />
+          <input value="" class="input"placeholder="Type initials here and press Enter." id="inputFeild"></input>
+
+          <button href="#" class="start-quiz-button btn">Click to begin!</button>
+          <ul class="row block" id="namesList">
+          </ul>
+          <section id="choices-cont"></section>
+          <button href="#" class="answerbutton" id="answer1"></button>
           <button href="#" class="answerbutton2" id="answer2"></button>
-          <button href="#" class="answerbutton3" id ="answer3"></button>
-          <button href="#" class="answerbutton4" id="answer4"></button>
-          <button href="#" class="answerbutton5" id ="answer5"></button>
-          <button href="#" class="answerbutton6" id="answer6"></button>
+          <button href="#" class="answerbutton3" id="answer2"></button>
+          <button href="#" class="answerbutton4" id="answer2"></button>
+          <button href="#" class="answerbutton5" id="answer2"></button>
+          <button href="#" class="answerbutton6" id="answer2"></button>
+
+          <h4 class="text-left" id="countdown" id="timerText"></h4>
         </div>
+
+        <section id="initialsPage">
+          <div></div>
+        </section>
       </div>
 
-    <!-- <div class="card container" style="width: 50%">
+      <!-- <div class="card container" style="width: 50%">
         <div class="card-body">
           <h5 class="card-title">Quesiton 1</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">

@@ -109,7 +109,6 @@ function gameOver() {
         Score: "Correct answers: " + correctAnswers +" Incorrect Answers: " + incorrectAnswers,
       }));
       initialsPage.value = "";
-      
     }
   });
   titleText.textContent =
